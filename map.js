@@ -40,7 +40,7 @@ map.on('click', 'HSdata', function (e) {
     var stateName = e.features[0].properties.NAME;
     new mapboxgl.Popup()
         .setLngLat(e.lngLat)
-        .setHTML('<h2>' + stateName + '</h2>' +  '<h3>' +  entriesDiff + ' Students' + '</h3>')
+        .setHTML('<h2>' + stateName + '</h2>' +  '<h3>' +  entriesDiff.toLocaleString() + ' Students' + '</h3>')
         .addTo(map);
 });
 // Change the cursor to a pointer when the mouse is over the turnstileData layer.
